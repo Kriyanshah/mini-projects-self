@@ -1,4 +1,4 @@
-# snake water gun game the highly readable code
+# snake water gun game the less readable code
 import random
 
 # 1 for snake, -1 for water, 0 for gun
@@ -16,18 +16,10 @@ for i in range(t):
     if you == computer:
         print("It's a tie!")
     else:
-        if computer == -1 and you ==1 :
+        if (computer-you) == -2 or (computer-you) == 1:
             print("You win!")
-        elif computer == -1 and you ==0:
+        elif (computer-you== -1) or (computer-you) == 2:
             print("You lose!")
-        elif computer == 1 and you == -1:
-            print("You lose!")
-        elif computer == 1 and you == 0:
-            print("You win!")
-        elif computer == 0 and you == 1:
-            print("You lose!")
-        elif computer == 0 and you == -1:
-            print("You win!")
         else:
             print("Something went wrong!")
 print("                Thanks for playing!")
